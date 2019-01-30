@@ -62,7 +62,7 @@
                 <configuration>
                     <!-- configure which test to run -->
                     <testFilesIncluded>
-                        <!-- <jMeterTestFile>Class_23Jan.jmx</jMeterTestFile> --> <!-- multiple Test use gateway.* -->
+                        <!-- <jMeterTestFile>Class_23Jan.jmx</jMeterTestFile> --> 
                         <jMeterTestFile>*.jmx</jMeterTestFile>
                     </testFilesIncluded>
                     <ignoreResultFailures>false</ignoreResultFailures>
