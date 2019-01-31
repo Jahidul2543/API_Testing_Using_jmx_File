@@ -11,60 +11,9 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-        <collectionProp name="Arguments.arguments">
-          <elementProp name="userName1" elementType="Argument">
-            <stringProp name="Argument.name">userName1</stringProp>
-            <stringProp name="Argument.value">testdata</stringProp>
-            <stringProp name="Argument.desc">test environment</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="userName2" elementType="Argument">
-            <stringProp name="Argument.name">userName2</stringProp>
-            <stringProp name="Argument.value">testdata2</stringProp>
-            <stringProp name="Argument.desc">acceptance environment</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="Env" elementType="Argument">
-            <stringProp name="Argument.name">Env</stringProp>
-            <stringProp name="Argument.value">${__property(Environment,,test)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="password1" elementType="Argument">
-            <stringProp name="Argument.name">password1</stringProp>
-            <stringProp name="Argument.value">testdata</stringProp>
-            <stringProp name="Argument.desc">test</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="password2" elementType="Argument">
-            <stringProp name="Argument.name">password2</stringProp>
-            <stringProp name="Argument.value">testdata2</stringProp>
-            <stringProp name="Argument.desc">accp</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-        </collectionProp>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="false">
+        <collectionProp name="Arguments.arguments"/>
       </Arguments>
-      <hashTree/>
-      <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
-        <stringProp name="filename"></stringProp>
-        <stringProp name="parameters"></stringProp>
-        <boolProp name="resetInterpreter">false</boolProp>
-        <stringProp name="script">if(vars.get(&quot;Env&quot;).equalsIgnoreCase(&quot;test&quot;))
-	{
-    
-      vars.put(&quot;userName&quot;,(vars.get(&quot;userName1&quot;)));
-      vars.put(&quot;password&quot;,(vars.get(&quot;password1&quot;)));
-      
-	}
-
-	else if (vars.get(&quot;Env&quot;).equalsIgnoreCase(&quot;accp&quot;))   
-	{   
-    
-      vars.put(&quot;userName&quot;,vars.get(&quot;userName2&quot;));
-      vars.put(&quot;password&quot;,vars.get(&quot;password2&quot;));
-      
-	}</stringProp>
-      </BeanShellPreProcessor>
       <hashTree/>
       <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="false">
         <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -506,8 +455,8 @@
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{  &#xd;
-   &quot;username&quot;:&quot;${userName}&quot;,&#xd;
-   &quot;password&quot;:&quot;${password}&quot;&#xd;
+   &quot;username&quot;:&quot;testdata&quot;,&#xd;
+   &quot;password&quot;:&quot;testdata&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
